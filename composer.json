@@ -1,0 +1,9 @@
+{
+    "require": {
+        "symfony/routing": "^5.1",
+        "symfony/config": "^5.1",
+        "symfony/framework-bundle": "^5.1",
+        "doctrine/annotations": "^1.10",
+        "doctrine/cache": "^1.10"
+    }
+}
