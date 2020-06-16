@@ -26,8 +26,8 @@ $loader = new AnnotationDirectoryLoader(
 $routes = $loader->load(__DIR__ . '/src/Controller/');
 
 // Init RequestContext object
-$context = new RequestContext();
-$context->fromRequest(Request::createFromGlobals());
+$context = RequestContext::fromUri($_SERVER['REQUEST_URI']);
+//$context->fromRequest(Request::createFromGlobals());  // Or use the actual Symfony Request object
 
 $matcher = new UrlMatcher($routes, $context);
 $parameters = $matcher->match($context->getPathInfo());
